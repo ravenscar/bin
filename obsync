@@ -1,0 +1,10 @@
+#!/bin/zsh
+set -e
+
+cd ~/Documents/obsidian-main
+git pull
+git add *.md
+message="Auto from "`hostname`" at "`date`
+echo $message
+git commit -m "$message"
+git push
